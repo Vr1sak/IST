@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svi oglasi</title>
+</head>
+<body>
+    <nav>
+        <a href="/svioglasi">Pogledaj sve oglase</a>
+        <a href="/dodajoglas">Dodaj oglas</a>
+    </nav>
+    <div>
+        <form action="/filtrirajoglasezakategoriju" method="POST">
+            <label for="">Ime kategorije</label> <input type="text" name="kategorija"> <button type="submit">Filtriraj</button>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Kategorija</td>
+                <td>Datum isteka</td>
+                <td>Tekst oglasa</td>
+                <td>Cena</td>
+                <td>Oznake</td>
+                <td>Mejlovi</td>
+            </tr>
+        </thead>
+        <tbody>
+            #{data}
+        </tbody>
+    </table>
+</body>
+</html>

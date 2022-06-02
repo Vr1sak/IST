@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma za dodavnje</title>
+</head>
+<body>
+    <nav>
+        <a href="/svioglasi">Pogledaj sve oglase</a>
+        <a href="/dodajoglas">Dodaj oglas</a>
+    </nav>
+
+    <form action="#{ruta}" method="post">
+        <select name="kat">
+            <option value="Stan">Stan</option>
+            <option value="Alat">Alat</option>
+            <option value="Auto">Auto</option>
+        </select>
+        <br>
+        Datum <input type="text" name="datumIsteka">
+        <br>
+        Cena <input type="text" name="cena">
+        <br>
+        Tekst<input type="text" name="tekstOglasa">
+        <br>
+        Oznaka <input type="text" name="oznaka">
+        <br>
+        Mejl <input type="text" name="email">
+        <br>
+        <button type="submit">Dodaj oglas</button>
+    </form>
+</body>
+</html>
