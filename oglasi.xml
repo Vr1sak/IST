@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<!DOCTYPE Oglasi SYSTEM "validacija.dtd">
+<Oglasi xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="validacija.xsd">
+    <Oglas kategorija="automobil">
+        <DatumIsteka>30/09/2022</DatumIsteka>
+        <Cena valuta="RSD">180000</Cena>
+        <TekstOglasa>Polovna Toyota CH-R</TekstOglasa>
+        <Oznake>
+            <Oznaka tip="Gorivo">Benzin</Oznaka>
+            <Oznaka tip="Broj vrata">5</Oznaka>
+            <Oznaka tip="Godiste">2018</Oznaka>
+        </Oznake>
+        <Mejlovi>
+            <Email privatno="false">test@test.com</Email>
+            <Email privatno="true">test2@test.com</Email>
+        </Mejlovi>
+    </Oglas>
+
+    <Oglas kategorija="alat">
+        <DatumIsteka>31/05/2022</DatumIsteka>
+        <Cena valuta="RSD">3500</Cena>
+        <TekstOglasa>Napravljen od visokokvalitetnog čelika kovanog u jednom komadu.
+        Fosfatirana crna polirana glava sa jakim magnetom.
+        PP ručica u kombinaciji sa TPR gumom.</TekstOglasa>
+        <Oznake>
+            <Oznaka tip="Duzina">320mm</Oznaka>
+            <Oznaka tip="Tezina">680gr</Oznaka>
+        </Oznake>
+        <Mejlovi>
+            <Email privatno="false">test@test.com</Email>
+            <Email privatno="true">test2@test.com</Email>
+            <Email privatno="true">test3@test.com</Email>
+        </Mejlovi>
+    </Oglas>
+
+    <Oglas kategorija="automobil">
+        <DatumIsteka>15/12/2022</DatumIsteka>
+        <Cena valuta="RSD">90000</Cena>
+        <TekstOglasa>Polovni Audi RS3</TekstOglasa>
+        <Oznake>
+            <Oznaka tip="Gorivo">Dizel</Oznaka>
+            <Oznaka tip="Broj vrata">4</Oznaka>
+            <Oznaka tip="Godiste">2016</Oznaka>
+        </Oznake>
+        <Mejlovi>
+            <Email privatno="false">test@test.com</Email>
+            <Email privatno="true">test2@test.com</Email>
+        </Mejlovi>
+    </Oglas>
+</Oglasi>
