@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.w3schools.com"
+ xmlns="http://www.w3schools.com"
+ elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Oglasi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Oglas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DatumIsteka">
+                <xs:simpleType>
+                    <xs:restriction base="xs:date">
+                        <xs:pattern value="(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/]20\d{2}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="Cena">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:restriction base="xs:Integer">
+                        <xs:minInclusive value="1"/>
+                    </xs:restriction>
+                    <xs:attribute name="valuta" default="RSD" type="xs:string"/>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="TekstOglasa">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="10"/>
+                        <xs:maxLength value="180"/>
+                    </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="Oznake">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Oznaka">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="tip" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              
+              <xs:element name="Mejlovi">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="Email">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:restriction base="xs:string">
+                            <xs:pattern value="[_\-a-zA-Z0-9\.\+]+@[a-zA-Z0-9](\.?[\-a-zA-Z0-9]*[a-zA-Z0-9])*"/>
+                          </xs:restriction>
+                          <xs:attribute name="privatno" type="xs:boolean" use="required" />
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+
+            <xs:attribute name="kategorija" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Alat"/>
+                        <xs:enumeration value="Automobil"/>
+                        <xs:enumeration value="Stan"/>
+                        <xs:enumeration value="Poducavanje"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
